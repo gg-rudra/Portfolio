@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #00203FFF;
+            color: #ADEFD1FF;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+        .contact-form {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form select, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #00203FFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: rgb(75, 96, 86);
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            color: green;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Me</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="graphic-design.html">Graphic Design</a>
+        <a href="game-development.html">Game Development</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Get in Touch!</h2>
+    <p>I would love to hear from you. Please fill out the form below:</p>
+
+    <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <select required>
+            <option value="" disabled selected>Select Subject</option>
+            <option value="Inquiry">General Inquiry</option>
+            <option value="Project">Project Proposal</option>
+            <option value="Feedback">Feedback</option>
+        </select>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
+</section>
+
+<footer>
+    <div class="portfolio-item"> <nav> <a href="contact.html">Go on Top</a> </nav>  </div>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        document.getElementById('successMessage').style.display = 'block'; 
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
